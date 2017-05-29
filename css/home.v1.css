@@ -9,31 +9,36 @@ body {
 
 #pagewrap {
 	padding: 5px;
-	width: 960px;
+	width: 1024px;
 	margin: 20px auto;
 }
+
 header {
 	height: 100px;
 	padding: 0 15px;
 }
-#content {
-	width: 290px;
-	float: left;
+
+#cell {
 	padding: 5px 15px;
+	margin: 0px 0px 10px 0px
+}
+
+#content {
+	width: 300px;
+	float: left;
 }
 
 #middle {
-	width: 294px; /* Account for margins + border values */
+	width: 300px; /* Account for margins + border values */
 	float: left;
-	padding: 5px 15px;
 	margin: 0px 5px 5px 5px;
 }
 
 #sidebar {
-	width: 270px;
-	padding: 5px 15px;
+	width: 300px;
 	float: left;
 }
+
 footer {
 	clear: both;
 	padding: 0 15px;
@@ -66,20 +71,23 @@ MEDIA QUERIES
 	#pagewrap {
 		width: 94%;
 	}
+	#cell {
+		width: 100%;
+	}
 	#content {
-		width: 41%;
-		padding: 1% 4%;
+		width: 45%;
+		padding: 0% 4% 0% 0%;
 	}
 	#middle {
-		width: 41%;
-		padding: 1% 4%;
+		width: 45%;
+		padding: 0% 4% 0% 0%;
 		margin: 0px 0px 5px 5px;
 		float: right;
 	}
 	
 	#sidebar {
 		clear: both;
-		padding: 1% 4%;
+		padding: 1% 4% 0% 0%;
 		width: auto;
 		float: none;
 	}
@@ -91,6 +99,10 @@ MEDIA QUERIES
 
 /* for 700px or less */
 @media screen and (max-width: 600px) {
+
+	#cell {
+		width: auto;
+	}
 
 	#content {
 		width: auto;
@@ -115,12 +127,12 @@ MEDIA QUERIES
 	background: #f8f8f8;
 }
 #sidebar {
-	background: #f0efef;
+	background: #f8f8f8;
 }
 header, #content, #middle, #sidebar {
 	margin-bottom: 5px;
 }
 
-#content, #middle, #sidebar, footer {
+#cell, footer {
 	border: solid 1px #ccc;
 }
